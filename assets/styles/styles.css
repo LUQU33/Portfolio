@@ -1,0 +1,90 @@
+/* Estilos generales */
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 2rem;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+ul, ol {
+    list-style: none;   /* Elimina los bullets o números */
+    margin: 0;          /* Elimina márgenes por defecto */
+    padding: 0;         /* Elimina el padding por defecto */
+}
+.contenedor {
+    border: .2rem solid black;
+}
+
+/* Barra Navegacion */
+.barra_navegacion {
+    max-width: 50%;
+    margin: 2rem auto;
+}
+.barra_navegacion_lista {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.barra_navegacion_lista_item {
+    text-decoration: none;
+}
+
+/*/////// INICIO ///////*/
+
+/* Main */
+.inicio {
+    display: flex;
+    justify-content: center;
+}
+.inicio_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: .2rem solid black;
+    width: 40rem;
+    height: 40rem;
+}
+.inicio_texto h1{
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+.inicio_texto h3{
+    font-size: 3rem;
+    margin-top: 0;
+}
+.inicio_imagen {
+    border: .2rem solid black;
+    width: 40rem;
+    height: 40rem;
+}
+.inicio_imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+/*/////// PROYECTO ///////*/
+
+/*/////// SOBRE MI ///////*/
+
+/*/////// HABILIDADES ///////*/
+
+/*/////// CONTACTO ///////*/
