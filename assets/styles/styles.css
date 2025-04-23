@@ -81,7 +81,58 @@ footer {
     text-align: center;
 }
 
-/*/////// PROYECTO ///////*/
+/*/////// PROYECTOS ///////*/
+.contenedor_proyectos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.proyecto {
+    border: .2rem solid black;
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+    overflow: hidden;
+    box-shadow: 0 .8rem 1.6rem rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+.proyecto-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.proyecto-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.proyecto-link:hover img {
+    transform: scale(1.1);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.proyecto-link:hover .overlay {
+    opacity: 1;
+}
 
 /*/////// SOBRE MI ///////*/
 
