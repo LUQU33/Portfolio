@@ -29,7 +29,7 @@ ul, ol {
 
 /* Barra Navegacion */
 .barra_navegacion {
-    max-width: 50%;
+    max-width: 100rem;
     margin: 2rem auto;
 }
 .barra_navegacion_lista {
@@ -45,8 +45,10 @@ ul, ol {
 
 /* Main */
 .inicio {
+    border: .2rem solid black;
     display: flex;
     justify-content: center;
+    max-width: 100rem;
 }
 .inicio_texto {
     display: flex;
@@ -83,53 +85,71 @@ footer {
 
 /*/////// PROYECTOS ///////*/
 .contenedor_proyectos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.proyecto {
     border: .2rem solid black;
-    position: relative;
-    width: 30rem;
-    height: 20rem;
-    overflow: hidden;
-    box-shadow: 0 .8rem 1.6rem rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
+    max-width: 100rem;
 }
-.proyecto-link {
-    display: block;
-    position: relative;
+.proyecto {
+    display: flex;
+    margin-top: 5rem;
+}
+.proyecto a {
+    border: .2rem solid black;
+    max-width: 50rem;
+    max-height: 50rem;
+}
+.proyecto a img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
+.proyecto_texto {
+    margin-left: 2rem;
+}
+.proyecto_texto_titulo  {
+
+}
+.proyecto_texto_descripcion {
+
+}
+
+/* Estilos para la imagen con efecto zoom al hacer hover */
+.proyecto-link {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border: .2rem solid black;
+    max-width: 50rem;
+    max-height: 50rem;
+}
+
 .proyecto-link img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     transition: transform 0.3s ease;
 }
 
 .proyecto-link:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Ligero zoom */
 }
+
+/* Estilo opcional para el overlay */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro transparente */
+    color: white;
+    font-size: 2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-weight: bold;
-    font-size: 1.2rem;
 }
+
 .proyecto-link:hover .overlay {
     opacity: 1;
 }
