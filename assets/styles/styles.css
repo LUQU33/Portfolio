@@ -25,6 +25,7 @@ ul, ol {
 }
 .contenedor {
     border: .2rem solid black;
+    min-width: 80%;
 }
 
 /* Barra Navegacion */
@@ -88,6 +89,9 @@ footer {
     border: .2rem solid black;
     max-width: 100rem;
 }
+.contenedor_proyectos h1 {
+    text-align: center;
+}
 .proyecto {
     display: flex;
     margin-top: 5rem;
@@ -149,13 +153,61 @@ footer {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-
 .proyecto-link:hover .overlay {
     opacity: 1;
 }
 
 /*/////// SOBRE MI ///////*/
+.contenedor {
+    border: .2rem solid black;
+}
+.contenedor_sobre_mi {
+    max-width: 100rem;
+}
+.contenedor_sobre_mi h1 {
+    text-align: center;
+}
+.sobre_mi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.sobre_mi_texto {
+    padding: 2rem;
+}
+.sobre_mi_img {
+    width: 50rem;
+    height: 50rem;
+}
+.sobre_mi_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /*/////// HABILIDADES ///////*/
-
+.contenedor_habilidades {
+    padding: 2rem;
+}
+.contenedor_habilidades h1 {
+    text-align: center;
+}
 /*/////// CONTACTO ///////*/
+.contenedor h1 {
+    text-align: center;
+}
+.formulario_contacto {
+    border: .2rem solid black;
+    padding: 2rem;
+}
+.formulario_contacto_campo {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.formulario_contacto_btn {
+    display: flex;
+    justify-content: end;
+}
+.formulario_contacto_btn button {
+
+}
