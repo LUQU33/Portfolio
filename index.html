@@ -6,6 +6,9 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="../Portfolio/assets/styles/styles.css">
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monoton&display=swap" rel="stylesheet">
 </head>
 <body class="no_scroll">
     <!-- Contenido Principal -->
@@ -14,17 +17,16 @@
             <article class="inicio_texto">
                 <h1 class="inicio_texto_saludo">Hola, soy</h1>
                 <h1 class="inicio_texto_nombre">Pedro Luque</h1>
-                <h3>Desarrollador FullStack</h3>
+                <h3 class="titulo_animado">Desarrollador FullStack</h3>
             </article>
 
             <article class="contenedor_barra_navegacion_inicio">
                 <nav class="barra_navegacion_inicio">
                     <ul class="barra_navegacion_lista_inicio">
-                        <li><a href="../Portfolio/index.html" class="barra_navegacion_lista_item_inicio">Inicio</a></li>
-                        <li><a href="../Portfolio/proyectos.html" class="barra_navegacion_lista_item_inicio">Proyectos</a></li>
-                        <li><a href="../Portfolio/sobremi.html" class="barra_navegacion_lista_item_inicio">Sobre Mi</a></li>
-                        <li><a href="../Portfolio/habilidades.html" class="barra_navegacion_lista_item_inicio">Habilidades</a></li>
-                        <li><a href="../Portfolio/contacto.html" class="barra_navegacion_lista_item_inicio">Contacto</a></li>
+                        <li><a href="../Portfolio/proyectos.html" class="barra_navegacion_lista_item_inicio"><ion-icon class="nav_icon" name="chevron-forward-outline"></ion-icon>Proyectos</a></li>
+                        <li><a href="../Portfolio/sobremi.html" class="barra_navegacion_lista_item_inicio"><ion-icon class="nav_icon" name="chevron-forward-outline"></ion-icon>Sobre Mi</a></li>
+                        <li></ion-icon><a href="../Portfolio/habilidades.html" class="barra_navegacion_lista_item_inicio"><ion-icon class="nav_icon" name="chevron-forward-outline"></ion-icon>Habilidades</a></li>
+                        <li><a href="../Portfolio/contacto.html" class="barra_navegacion_lista_item_inicio"><ion-icon class="nav_icon" name="chevron-forward-outline"></ion-icon>Contacto</a></li>
                     </ul>
                 </nav>
             </article>
@@ -34,5 +36,8 @@
     <footer>
         <p>© 2025 Pedro Luque Castaño | FullStack Developer</p>
     </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

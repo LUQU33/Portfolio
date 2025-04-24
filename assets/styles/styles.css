@@ -14,10 +14,11 @@ body {
     flex-direction: column;
     height: 100%;
     font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    background-color: #0B0B0B;
+    color: #EAEAEA;
 }
-h1, h2, h3 {
 
-}
 main {
     flex: 1;
     display: flex;
@@ -36,11 +37,15 @@ ul, ol {
 .no_scroll {
     overflow: hidden;
 }
+.active {
+    color: #53baff !important;
+}
 
 /* Footer */
 footer {
     padding: 2rem 0;
     text-align: center;
+    font-size: 1rem;
 }
 
 /* Barra Navegacion general*/
@@ -54,7 +59,12 @@ footer {
     padding: 1rem;
 }
 .barra_navegacion_lista_item {
+    color: #EAEAEA;
     text-decoration: none;
+}
+
+.barra_navegacion_lista_item:hover {
+    color: #53baff;
 }
 
 /*/////// INICIO ///////*/
@@ -74,7 +84,33 @@ footer {
     gap: 5rem;
     padding: 1rem;
 }
+
+.barra_navegacion_lista_inicio a{
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.barra_navegacion_lista_inicio a::after{
+    content: "";
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    width: 0%;
+    height: .3rem;
+    background-color: #53baff;
+    transition: width 0.3s ease;
+}
+
+.barra_navegacion_lista_inicio a:hover {
+    color:  #53baff;
+}
+
+.barra_navegacion_lista_inicio a:hover::after {
+    width: 100%;
+}
+
 .barra_navegacion_lista_item_inicio {
+    color: #EAEAEA;
     font-size: 5rem;
     text-decoration: none;
 }
@@ -86,21 +122,55 @@ footer {
     justify-content: space-between;
     max-width: 100rem;
 }
+.inicio_texto {
+    
+}
 .inicio_texto h1 {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
 }
 .inicio_texto_saludo {
-    font-size: 10rem;
+    font-size: 6rem;
     text-align: start;
 }
 .inicio_texto_nombre {
-    font-size: 15rem;
+    font-size: 10rem;
     text-align: start;
 }
 .inicio_texto h3{
     font-size: 6rem;
     margin-top: 8rem;
+    background: linear-gradient(270deg,  
+    #53baff,
+    #00ffff,
+    #e0faff,
+    #53baff,
+    #00ffff);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moverColor 3s ease infinite
+}
+
+@keyframes moverColor {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /*/////// PROYECTOS ///////*/
