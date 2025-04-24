@@ -1,22 +1,29 @@
 /* Estilos generales */
-html{
+html {
     box-sizing: border-box;
     font-size: 62.5%;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 *, *::before, *::after {
     box-sizing: inherit;
 }
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     font-size: 2rem;
 }
+h1, h2, h3 {
+
+}
 main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
 }
 ul, ol {
     list-style: none;   /* Elimina los bullets o números */
@@ -24,11 +31,19 @@ ul, ol {
     padding: 0;         /* Elimina el padding por defecto */
 }
 .contenedor {
-    border: .2rem solid black;
     min-width: 80%;
 }
+.no_scroll {
+    overflow: hidden;
+}
 
-/* Barra Navegacion */
+/* Footer */
+footer {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Barra Navegacion general*/
 .barra_navegacion {
     max-width: 100rem;
     margin: 2rem auto;
@@ -44,49 +59,52 @@ ul, ol {
 
 /*/////// INICIO ///////*/
 
-/* Main */
-.inicio {
-    border: .2rem solid black;
+/* Barra Navegacion inicio */
+.contenedor_barra_navegacion_inicio{
     display: flex;
-    justify-content: center;
+    align-items: center;
+}
+.barra_navegacion_inicio {
     max-width: 100rem;
+    margin: 2rem auto;
 }
-.inicio_texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    border: .2rem solid black;
-    width: 40rem;
-    height: 40rem;
+.barra_navegacion_lista_inicio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    padding: 1rem;
 }
-.inicio_texto h1{
-    font-size: 4rem;
-    margin-bottom: 0;
-}
-.inicio_texto h3{
-    font-size: 3rem;
-    margin-top: 0;
-}
-.inicio_imagen {
-    border: .2rem solid black;
-    width: 40rem;
-    height: 40rem;
-}
-.inicio_imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.barra_navegacion_lista_item_inicio {
+    font-size: 5rem;
+    text-decoration: none;
 }
 
-/* Footer */
-footer {
-    text-align: center;
+
+/* Main */
+.inicio {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100rem;
+}
+.inicio_texto h1 {
+    margin: 0;
+    padding: 0;
+}
+.inicio_texto_saludo {
+    font-size: 10rem;
+    text-align: start;
+}
+.inicio_texto_nombre {
+    font-size: 15rem;
+    text-align: start;
+}
+.inicio_texto h3{
+    font-size: 6rem;
+    margin-top: 8rem;
 }
 
 /*/////// PROYECTOS ///////*/
 .contenedor_proyectos {
-    border: .2rem solid black;
     max-width: 100rem;
 }
 .contenedor_proyectos h1 {
@@ -97,7 +115,6 @@ footer {
     margin-top: 5rem;
 }
 .proyecto a {
-    border: .2rem solid black;
     max-width: 50rem;
     max-height: 50rem;
 }
@@ -121,7 +138,6 @@ footer {
     display: inline-block;
     overflow: hidden;
     position: relative;
-    border: .2rem solid black;
     max-width: 50rem;
     max-height: 50rem;
 }
@@ -158,9 +174,6 @@ footer {
 }
 
 /*/////// SOBRE MI ///////*/
-.contenedor {
-    border: .2rem solid black;
-}
 .contenedor_sobre_mi {
     max-width: 100rem;
 }
@@ -192,11 +205,7 @@ footer {
     text-align: center;
 }
 /*/////// CONTACTO ///////*/
-.contenedor h1 {
-    text-align: center;
-}
 .formulario_contacto {
-    border: .2rem solid black;
     padding: 2rem;
 }
 .formulario_contacto_campo {
