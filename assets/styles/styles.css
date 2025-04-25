@@ -231,14 +231,22 @@ footer {
     gap: 0;
 }
 .proyecto_texto_titulo  {
-
+    background: linear-gradient(270deg,  
+    #53baff,
+    #00ffff,
+    #e0faff,
+    #53baff,
+    #00ffff);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moverColor 6s ease infinite
 }
 .proyecto_texto_descripcion {
     height: 12rem;
     overflow-y: auto;
     padding-right: 1rem;
 }
-
 .proyecto_texto_descripcion::-webkit-scrollbar {
     width: 6px;
 }
@@ -246,7 +254,6 @@ footer {
     background-color: #53baff;
     border-radius: 1rem;
 }
-
 .proyecto_texto_tecnologias {
     height: 5rem;
 }
