@@ -68,7 +68,7 @@ footer {
 
 .barra_navegacion_lista_item:hover {
     color: #53baff;
-    transform: scale(1.1);
+    transform: scale(1.5);
 }
 
 /*/////// INICIO ///////*/
@@ -132,6 +132,7 @@ footer {
 }
 
 .inicio_texto::before {
+    border-radius: 1rem;
     content: "";
     position: absolute;
     top: 0;
@@ -143,18 +144,18 @@ footer {
 }
 
 .inicio_texto h1 {
-    font-family: "Monoton", sans-serif;
+    font-family: "Unica One", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin: 0;
     padding: 0;
 }
 .inicio_texto_saludo {
-    font-size: 6rem;
+    font-size: 8rem;
     text-align: start;
 }
 .inicio_texto_nombre {
-    font-size: 10rem;
+    font-size: 15rem;
     text-align: start;
 }
 .inicio_texto h3{
@@ -189,6 +190,21 @@ footer {
         background-position: 0% 50%;
     }
 }
+.contenedor_inicio_iconos {
+    display: flex;
+    gap: 2rem;
+}
+.inicio_icono{
+    border: none;
+    color: #EAEAEA;
+    font-size: 5rem;
+    transition: color .3s ease, transform .3s ease;
+    text-decoration: none;
+}
+.inicio_icono:hover{
+    color: #53baff;
+    transform: scale(1.1);
+}
 
 /*/////// PROYECTOS ///////*/
 .contenedor_proyectos {
@@ -196,7 +212,7 @@ footer {
 }
 .contenedor_proyectos h1 {
     font-size: 7rem;
-    font-family: "Monoton", sans-serif;
+    font-family: "Unica One", sans-serif;
     text-align: center;
 }
 .proyecto {
@@ -302,7 +318,7 @@ footer {
 }
 .contenedor_sobre_mi h1 {
     font-size: 7rem;
-    font-family: "Monoton", sans-serif;
+    font-family: "Unica One", sans-serif;
     text-align: center;
 }
 .sobre_mi {
@@ -360,7 +376,7 @@ footer {
 /*/////// HABILIDADES ///////*/
 .section_habilidades h1{
     font-size: 7rem;
-    font-family: "Monoton", sans-serif;
+    font-family: "Unica One", sans-serif;
     text-align: center;
 }
 .section_habilidades_contenedor {
@@ -405,7 +421,7 @@ footer {
 /*/////// CONTACTO ///////*/
 .titulo_seccion {
     font-size: 7rem;
-    font-family: "Monoton", sans-serif;
+    font-family: "Unica One", sans-serif;
     text-align: center;
 }
 
