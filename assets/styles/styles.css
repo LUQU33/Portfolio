@@ -211,6 +211,7 @@ footer {
 }
 .proyecto:hover {
     transform: scale(1.05);
+    border: .2rem solid #53baff;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6); /* Aumenta la sombra al hacer hover */
 }
 .proyecto a {
@@ -309,7 +310,7 @@ footer {
     justify-content: center;
 }
 .sobre_mi_texto {
-    width: 100rem;
+    width: 70rem;
     height: 100rem;
     padding: 5rem;
     position: relative;
@@ -323,7 +324,7 @@ footer {
     top: 0;
     left: -2rem;
     width: 0;
-    height: 34rem;
+    height: 43.5rem;
     border-top: .2rem solid #EAEAEA;
     border-left: .2rem solid #EAEAEA;
 }
@@ -357,11 +358,52 @@ footer {
 }
 
 /*/////// HABILIDADES ///////*/
-.contenedor_habilidades {
-    padding: 2rem;
-}
-.contenedor_habilidades h1 {
+.section_habilidades h1{
+    font-size: 7rem;
+    font-family: "Monoton", sans-serif;
     text-align: center;
+}
+.section_habilidades_contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+}
+.section_habilidades_item {
+    background-color: #1A1A1A;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.section_habilidades_item:hover i, .section_habilidades_item:hover .habilidades_titulo {
+    background: linear-gradient(270deg,  
+    #53baff,
+    #00ffff,
+    #e0faff,
+    #53baff,
+    #00ffff);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moverColor 4s ease infinite
+}
+.section_habilidades_item:hover {
+    transform: scale(1.05);
+    border: .2rem solid #53baff;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6); /* Aumenta la sombra al hacer hover */
+}
+.fa-brands {
+    font-size: 10rem
+}
+.devicon-mongodb-plain{
+    font-size: 10rem;
+}
+.habilidades_titulo {
+    margin: .5rem;
 }
 /*/////// CONTACTO ///////*/
 .formulario_contacto {
