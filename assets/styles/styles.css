@@ -39,6 +39,8 @@ ul, ol {
 }
 .active {
     color: #53baff !important;
+    border-bottom: .2rem solid #53baff;
+    padding: 1rem;
 }
 
 /* Footer */
@@ -61,10 +63,12 @@ footer {
 .barra_navegacion_lista_item {
     color: #EAEAEA;
     text-decoration: none;
+    transition: transform .3s ease-in;
 }
 
 .barra_navegacion_lista_item:hover {
     color: #53baff;
+    transform: scale(1.1);
 }
 
 /*/////// INICIO ///////*/
@@ -123,8 +127,21 @@ footer {
     max-width: 100rem;
 }
 .inicio_texto {
-    
+    position: relative;
+    display: inline-block;
 }
+
+.inicio_texto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    width: 5rem;
+    height: 5rem;
+    border-top: .2rem solid #EAEAEA;
+    border-left: .2rem solid #EAEAEA;
+}
+
 .inicio_texto h1 {
     font-family: "Monoton", sans-serif;
     font-weight: 400;
@@ -178,33 +195,65 @@ footer {
     max-width: 100rem;
 }
 .contenedor_proyectos h1 {
+    font-size: 7rem;
+    font-family: "Monoton", sans-serif;
     text-align: center;
 }
 .proyecto {
+    background-color: #1A1A1A;
+    border-radius: 2rem;
     display: flex;
     margin-top: 5rem;
+    padding: 1rem;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.proyecto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6); /* Aumenta la sombra al hacer hover */
 }
 .proyecto a {
-    max-width: 50rem;
-    max-height: 50rem;
+    width: 150rem;
+    height: 30rem;
 }
 .proyecto a img{
     width: 100%;
     height: 100%;
+    border-radius: 2rem;
     object-fit: cover;
 }
 .proyecto_texto {
+    width: 150rem;
+    height: 30rem;
     margin-left: 2rem;
+    display: grid;
+    gap: 0;
 }
 .proyecto_texto_titulo  {
 
 }
 .proyecto_texto_descripcion {
+    height: 12rem;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
 
+.proyecto_texto_descripcion::-webkit-scrollbar {
+    width: 6px;
+}
+.proyecto_texto_descripcion::-webkit-scrollbar-thumb {
+    background-color: #53baff;
+    border-radius: 1rem;
+}
+
+.proyecto_texto_tecnologias {
+    height: 5rem;
 }
 
 /* Estilos para la imagen con efecto zoom al hacer hover */
 .proyecto-link {
+    border-radius: 2rem;
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -216,11 +265,6 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.proyecto-link:hover img {
-    transform: scale(1.05); /* Ligero zoom */
 }
 
 /* Estilo opcional para el overlay */
