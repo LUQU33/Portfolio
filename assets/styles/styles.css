@@ -296,9 +296,12 @@ footer {
 
 /*/////// SOBRE MI ///////*/
 .contenedor_sobre_mi {
+    margin: 0;
     max-width: 100rem;
 }
 .contenedor_sobre_mi h1 {
+    font-size: 7rem;
+    font-family: "Monoton", sans-serif;
     text-align: center;
 }
 .sobre_mi {
@@ -306,13 +309,17 @@ footer {
     grid-template-columns: 1fr 1fr;
 }
 .sobre_mi_texto {
-    padding: 2rem;
+    padding: 5rem;
 }
 .sobre_mi_img {
     width: 50rem;
     height: 50rem;
 }
 .sobre_mi_img img {
+    mask-image: linear-gradient(
+        black 80%,
+        transparent
+    );
     width: 100%;
     height: 100%;
     object-fit: cover;
