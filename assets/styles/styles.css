@@ -169,7 +169,7 @@ footer {
     background-size: 800% 800%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: moverColor 3s ease infinite
+    animation: moverColor 6s ease infinite
 }
 
 @keyframes moverColor {
@@ -305,17 +305,48 @@ footer {
     text-align: center;
 }
 .sobre_mi {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
 }
 .sobre_mi_texto {
+    width: 100rem;
+    height: 100rem;
     padding: 5rem;
+    position: relative;
 }
+.sobre_mi_texto h3 {
+    position: relative;
+}
+.sobre_mi_texto h3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    width: 0;
+    height: 34rem;
+    border-top: .2rem solid #EAEAEA;
+    border-left: .2rem solid #EAEAEA;
+}
+
+.sobre_mi_texto h3 span {
+    background: linear-gradient(270deg,  
+    #53baff,
+    #00ffff,
+    #e0faff,
+    #53baff,
+    #00ffff);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moverColor 6s ease infinite
+}
+
 .sobre_mi_img {
     width: 50rem;
     height: 50rem;
 }
 .sobre_mi_img img {
+    margin-right: 0;
     mask-image: linear-gradient(
         black 80%,
         transparent
