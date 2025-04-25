@@ -406,14 +406,14 @@ footer {
     margin: .5rem;
 }
 /*/////// CONTACTO ///////*/
-.contenedor h1 {
+.titulo_seccion {
     font-size: 7rem;
     font-family: "Monoton", sans-serif;
     text-align: center;
 }
 
 .formulario_contacto {
-    background-color: #1A1A1A;
+    background-color: #141414;
     border-radius: 2rem;
     padding: 2rem;
     display: grid;
@@ -432,7 +432,8 @@ footer {
     display:grid;
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
-    border: .2rem solid #EAEAEA;
+    background-color: #1A1A1A;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 .formulario_contacto_campo label {
     font-size: 3rem;
